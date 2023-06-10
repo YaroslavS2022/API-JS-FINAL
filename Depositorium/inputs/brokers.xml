@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="http://www.example.com/request datatypes.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <opcode>brokers</opcode>
+    <brokers>
+        <broker>
+            <broker_id>123456789</broker_id>
+        </broker>
+        <broker>
+            <broker_id>987654321</broker_id>
+        </broker>
+    </brokers>
+    <elsign>ElectronicSignature</elsign>
+</request>

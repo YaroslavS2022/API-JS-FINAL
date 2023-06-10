@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<depoopers xmlns="http://www.example.com/depoopers" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="http://www.example.com/depoopers datatypes.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <depooper>
+        <opcode>1234567890</opcode>
+        <opname>Example Operation</opname>
+        <is_pair>Y</is_pair>
+        <is_opl>1</is_opl>
+        <paramlist>Example Parameters</paramlist>
+        <allow_du>Y</allow_du>
+        <bound_du>Example Bound DU</bound_du>
+        <provodki>Example Provodki</provodki>
+    </depooper>
+</depoopers>
