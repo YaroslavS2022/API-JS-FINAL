@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<brokagrees xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="http://www.example.com/brokagrees datatypes.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <brokagree>
+        <broker_id>ABC123</broker_id>
+        <deponent_type>1</deponent_type>
+        <deponent_id>DEP001</deponent_id>
+        <deponent_name>Depositor 1</deponent_name>
+        <dog_zb_no>DOG001</dog_zb_no>
+        <dog_zb_date>2023-06-01</dog_zb_date>
+        <is_zb_act>Y</is_zb_act>
+        <del_zb_date>2023-07-01</del_zb_date>
+        <is_rc_act>Y</is_rc_act>
+        <accnt_type>A</accnt_type>
+    </brokagree>
+    <brokagree>
+        <broker_id>DEF456</broker_id>
+        <deponent_type>2</deponent_type>
+        <deponent_id>DEP002</deponent_id>
+        <deponent_name>Depositor 2</deponent_name>
+        <dog_zb_no>DOG002</dog_zb_no>
+        <dog_zb_date>2023-06-05</dog_zb_date>
+        <is_zb_act>N</is_zb_act>
+        <is_rc_act>Y</is_rc_act>
+        <accnt_type>S</accnt_type>
+    </brokagree>
+    <brokagree>
+        <broker_id>GHI789</broker_id>
+        <deponent_type>2</deponent_type>
+        <deponent_id>DEP003</deponent_id>
+        <deponent_name>Depositor 3</deponent_name>
+        <dog_zb_no>DOG003</dog_zb_no>
+        <dog_zb_date>2023-06-10</dog_zb_date>
+        <is_zb_act>Y</is_zb_act>
+        <del_zb_date>2023-07-10</del_zb_date>
+        <is_rc_act>R</is_rc_act>
+        <accnt_type>C</accnt_type>
+    </brokagree>
+</brokagrees>

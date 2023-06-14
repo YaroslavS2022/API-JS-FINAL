@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<depoagrees xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <depoagree>
+    <deponent_id>DEP001</deponent_id>
+    <deponent_type>1</deponent_type>
+    <operation>OPEN</operation>
+    <agree_no>12345</agree_no>
+    <agree_date>2023-06-12</agree_date>
+    <cltype_nk>100</cltype_nk>
+    <country_id>US</country_id>
+    <full_name>Full Name</full_name>
+    <short_name>Short Name</short_name>
+    <account>ACC001</account>
+    <address>123 Main St, City</address>
+    <note>Note</note>
+  </depoagree>
+  <depoagree>
+    <deponent_id>DEP002</deponent_id>
+    <deponent_type>2</deponent_type>
+    <operation>CHANGE</operation>
+    <agree_no>54321</agree_no>
+    <agree_date>2023-06-15</agree_date>
+    <cltype_nk>200</cltype_nk>
+    <country_id>GB</country_id>
+    <full_name>Another Full Name</full_name>
+    <short_name>Short</short_name>
+    <account>ACC002</account>
+    <address>456 Park Ave, City</address>
+    <note>Another Note</note>
+  </depoagree>
+</depoagrees>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="http://www.example.com/request datatypes.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <opcode>brokers</opcode>
+    <brokagreecodes>
+        <opcode>ABC123</opcode>
+        <opcode>GHI789</opcode>
+    </brokagreecodes>
+</request>

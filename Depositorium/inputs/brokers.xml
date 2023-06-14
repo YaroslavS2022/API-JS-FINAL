@@ -5,11 +5,10 @@
     <opcode>brokers</opcode>
     <brokers>
         <broker>
-            <broker_id>123456789</broker_id>
+            <broker_id>ABC123</broker_id>
         </broker>
         <broker>
-            <broker_id>987654321</broker_id>
+            <broker_id>GHI789</broker_id>
         </broker>
     </brokers>
-    <elsign>ElectronicSignature</elsign>
 </request>

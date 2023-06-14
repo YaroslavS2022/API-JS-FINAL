@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <opcode>depoagrees</opcode>
+    <depocodes>
+        <depocode>ABC123</depocode>
+        <depocode>DEF456</depocode>
+        <depocode>GHI789</depocode>
+    </depocodes>
+</request>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xsi:schemaLocation="http://www.example.com/request datatypes.xsd" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <opcode>fdaccnts</opcode>
+    <fdaccnts>
+        <fdaccnt>
+            <opcode>CP002</opcode>
+            <depoday>2023-06-13</depoday>
+        </fdaccnt>
+        <fdaccnt>
+            <opcode>CP00122</opcode>
+            <depoday>2023-06-13</depoday>
+        </fdaccnt>
+    </fdaccnts>
+</request>

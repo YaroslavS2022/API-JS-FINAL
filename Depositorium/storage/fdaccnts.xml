@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fdaccnts xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <depoday>2023-06-12</depoday>
+  <fdaccnt>
+    <fda_key>1</fda_key>
+    <accnt>100001</accnt>
+    <opcode>CP001</opcode>
+    <owner>John Doe</owner>
+    <pledgee>XYZ Corporation</pledgee>
+    <dt_in>0</dt_in>
+    <cr_in>10000</cr_in>
+    <dt>5000</dt>
+    <cr>0</cr>
+    <lastdmv>2023-06-12</lastdmv>
+  </fdaccnt>
+  <fdaccnt>
+    <fda_key>2</fda_key>
+    <accnt>100002</accnt>
+    <opcode>CP002</opcode>
+    <owner>Jane Smith</owner>
+    <pledgee></pledgee>
+    <dt_in>2000</dt_in>
+    <cr_in>0</cr_in>
+    <dt>0</dt>
+    <cr>1000</cr>
+    <lastdmv>2023-06-13</lastdmv>
+  </fdaccnt>
+  <fdaccnt>
+    <fda_key>3</fda_key>
+    <accnt>100003</accnt>
+    <opcode>CP00122</opcode>
+    <owner>John Smith</owner>
+    <pledgee></pledgee>
+    <dt_in>200032</dt_in>
+    <cr_in>0</cr_in>
+    <dt>0</dt>
+    <cr>4000</cr>
+    <lastdmv>2025-06-13</lastdmv>
+  </fdaccnt>
+</fdaccnts>

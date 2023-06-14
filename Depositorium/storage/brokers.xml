@@ -2,15 +2,16 @@
 <brokers xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xsi:schemaLocation="http://www.example.com/brokers datatypes.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <signer>ABC123</signer>
-    <timestamp>2023-06-03T14:30:00</timestamp>
     <broker>
-        <broker_id>1234567890</broker_id>
+        <broker_id>ABC123</broker_id>
         <broker_name>Example Broker 1</broker_name>
     </broker>
     <broker>
-        <broker_id>9876543210</broker_id>
+        <broker_id>NOTINTERESTED</broker_id>
+        <broker_name>Example Broker 0</broker_name>
+    </broker>
+    <broker>
+        <broker_id>GHI789</broker_id>
         <broker_name>Example Broker 2</broker_name>
     </broker>
-    <elsign>Example Electronic Signature</elsign>
 </brokers>
