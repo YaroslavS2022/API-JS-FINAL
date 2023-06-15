@@ -3,8 +3,8 @@ new Vue({
   data: {
     httpsMethod: 'GET',
     APIQuery: '',
-    xmlEntry: '', // XML data for the request
-    response: '', // Response from the server
+    xmlEntry: '', 
+    response: '', 
     code: '',
   },
   methods: {
@@ -26,30 +26,9 @@ new Vue({
       return '';
     },
     submitForm() {
+      const port = 'https://localhost:4000';
       this.response = '';
-      // this.api = this.xmlEntry;
-      const code = this.getCode();
-      console.log(code);
-      console.log();
-      const APIRequest = this.test();
-      if (APIRequest === 'birgi' || APIRequest === 'securities')
-        console.log('calm');
-      else if (APIRequest === 'depoagrees')
-        console.log('panic')
-      else
-        console.log('total panic');
-      const url = this.APIQuery;
-      console.log();
-      console.log();
-      console.log(url);
-      console.log("----------------------------");
-      console.log(this.APIQuery);
-      console.log();
-      console.log();
-
-      // const data = { entry: this.xmlEntry };
-
-      this.response = url;
+      const url = port + this.APIQuery;
       this.test();
       axios({
         method: this.httpsMethod,
@@ -65,6 +44,7 @@ new Vue({
         })
         .catch((error) => {
           console.error('Error:', error);
+          this.response = 'Critical error while fetching data!\nCheck the console log for more information.';
         });
     },
   },
@@ -84,15 +64,11 @@ new Vue({
         <textarea v-model="xmlEntry" placeholder="XML entry" rows="20" style="width: 50%"></textarea>
         <textarea v-model="response" placeholder="Response" rows="20" style="width: 50%"></textarea>
       </div>
+      <div style="display: flex;">
+        
+      </div>
       <br>
       <button @click="submitForm">Submit</button>
-      <br>
-      <br>
-      <br>
-      <textarea v-model="test()" placeholder="this is a test field" rows="5"></textarea>
-      <br>
-      <br>
-      <button @click="getCode">TEST</button>
       <br>
     </div>
   `,

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<provodki xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="http://www.example.com/provodki datatypes.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <signer>example_signer</signer>
+    <timestamp>2023-06-12T10:30:00</timestamp>
+    <depoday>2023-06-12</depoday>
+    <provodka>
+        <prov_id>1</prov_id>
+        <dt_accnt>123</dt_accnt>
+        <dt_owner>Owner 1</dt_owner>
+        <dt_pledgee>Pledgee 1</dt_pledgee>
+        <cr_accnt>456</cr_accnt>
+        <cr_owner>Owner 2</cr_owner>
+        <cr_pledgee>Pledgee 2</cr_pledgee>
+        <opcode>ABC123</opcode>
+        <cpcount>100</cpcount>
+        <ddoc_key>1001</ddoc_key>
+        <regtime>2023-06-12T11:00:00</regtime>
+        <execmode>D</execmode>
+    </provodka>
+    <provodka>
+        <prov_id>2</prov_id>
+        <dt_accnt>789</dt_accnt>
+        <dt_owner>Owner 3</dt_owner>
+        <dt_pledgee>Pledgee 3</dt_pledgee>
+        <cr_accnt>101112</cr_accnt>
+        <cr_owner>Owner 4</cr_owner>
+        <cr_pledgee>Pledgee 4</cr_pledgee>
+        <opcode>DEF456</opcode>
+        <cpcount>200</cpcount>
+        <ddoc_key>1002</ddoc_key>
+        <regtime>2023-06-12T12:00:00</regtime>
+        <execmode>P</execmode>
+    </provodka>
+</provodki>

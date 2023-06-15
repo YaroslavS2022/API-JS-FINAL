@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <depodocs>
+        <depodoc>
+            <opcode>op002</opcode>
+            <depoday>2024-06-12</depoday>
+            <ddoc_key>678</ddoc_key>
+            <deal_key>98765</deal_key>
+        </depodoc>    
+        <depodoc>
+            <opcode>op004</opcode>
+            <depoday>2024-06-12</depoday>
+            <ddoc_key>678</ddoc_key>
+            <deal_key>98765</deal_key>
+        </depodoc>            
+    </depodocs>
+</request>

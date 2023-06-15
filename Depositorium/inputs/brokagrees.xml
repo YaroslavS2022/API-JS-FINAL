@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <opcode>brokers</opcode>
     <brokagreecodes>
-        <opcode>ABC123</opcode>
-        <opcode>GHI789</opcode>
+        <opcode>DOG001</opcode>
+        <opcode>DOG002</opcode>
     </brokagreecodes>
 </request>

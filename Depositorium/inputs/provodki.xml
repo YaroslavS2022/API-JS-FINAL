@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<request xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <provodki>
+        <provodka>
+            <opcode>ABC123</opcode>
+            <depoday>2023-06-12</depoday>
+            <ddoc_key>12345</ddoc_key>
+        </provodka>
+        <provodka>
+            <opcode>DEF456</opcode>
+            <depoday>2023-06-12</depoday>
+            <ddoc_key>12345</ddoc_key>
+        </provodka>
+    </provodki>
+</request>

@@ -1,8 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<depostate>
-<depoday>Wed May 24 20:12:55 UTC 2023</depoday>
-<end_opl>Str123</end_opl>
-<end_vopl>Str123</end_vopl>
-<status>STR</status>
-<tech_break>STR</tech_break>
-</depostate>
+<?xml version="1.0" encoding="utf-8"?>
+<depodocs xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <depodoc>
+        <ddoc_key>12345</ddoc_key>
+        <opcode>op001</opcode>
+        <owner1>Sender1</owner1>
+        <owner2>Receiver1</owner2>
+        <tp_id>1</tp_id>
+        <clcode_tp>CL001</clcode_tp>
+        <net_id>NET001</net_id>
+        <doctype>D</doctype>
+        <cpcode>CP001</cpcode>
+        <cpcount>10</cpcount>
+        <summa_doc>1000.50</summa_doc>
+        <depoday_r>2023-06-12</depoday_r>
+        <status>Active</status>
+        <deal_key>98765</deal_key>
+        <deal_no>DN001</deal_no>
+        <deal_date>2023-06-10</deal_date>
+        <summa>500.25</summa>
+        <pay_date>2023-06-15</pay_date>
+        <p_code>OKPO001</p_code>
+        <p_accnt>ACC001</p_accnt>
+        <p_iban>IBAN001</p_iban>
+        <ground>Reason for the transaction</ground>
+        <regtime>2023-06-12T10:30:00</regtime>
+        <donetime>2023-06-12T11:00:00</donetime>
+    </depodoc>
+    <depodoc>
+        <ddoc_key>678</ddoc_key>
+        <opcode>op002</opcode>
+        <owner1>Sender2</owner1>
+        <owner2>Receiver2</owner2>
+        <tp_id>2</tp_id>
+        <clcode_tp>CL002</clcode_tp>
+        <net_id>NET002</net_id>
+        <doctype>Ds</doctype>
+        <cpcode>CP002</cpcode>
+        <cpcount>20</cpcount>
+        <summa_doc>3000.50</summa_doc>
+        <depoday_r>2024-06-12</depoday_r>
+        <status>Active</status>
+        <deal_key>98765</deal_key>
+        <deal_no>DN002</deal_no>
+        <deal_date>2023-06-10</deal_date>
+        <summa>500.25</summa>
+        <pay_date>2023-06-15</pay_date>
+        <p_code>OKPO001</p_code>
+        <p_accnt>ACC002</p_accnt>
+        <p_iban>IBAN002</p_iban>
+        <ground>Reason for the transaction</ground>
+        <regtime>2023-06-12T10:30:00</regtime>
+        <donetime>2023-06-12T11:00:00</donetime>
+    </depodoc>
+    <depodoc>
+        <ddoc_key>91021</ddoc_key>
+        <opcode>op003</opcode>
+        <owner1>Sender3</owner1>
+        <owner2>Receiver3</owner2>
+        <tp_id>3</tp_id>
+        <clcode_tp>CL003</clcode_tp>
+        <net_id>NET003</net_id>
+        <doctype>X</doctype>
+        <cpcode>CP003</cpcode>
+        <cpcount>10</cpcount>
+        <summa_doc>5000.50</summa_doc>
+        <depoday_r>2023-06-12</depoday_r>
+        <status>Active</status>
+        <deal_key>98765</deal_key>
+        <deal_no>DN003</deal_no>
+        <deal_date>2023-06-10</deal_date>
+        <summa>500.25</summa>
+        <pay_date>2023-06-15</pay_date>
+        <p_code>OKPO003</p_code>
+        <p_accnt>ACC003</p_accnt>
+        <p_iban>IBAN003</p_iban>
+        <ground>Reason for the transaction</ground>
+        <regtime>2023-06-12T10:30:00</regtime>
+        <donetime>2023-06-12T11:00:00</donetime>
+    </depodoc>
+</depodocs>

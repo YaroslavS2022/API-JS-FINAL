@@ -20,8 +20,9 @@
         <deponent_id>DEP002</deponent_id>
         <deponent_name>Depositor 2</deponent_name>
         <dog_zb_no>DOG002</dog_zb_no>
-        <dog_zb_date>2023-06-05</dog_zb_date>
+        <dog_zb_date>2023-07-05</dog_zb_date>
         <is_zb_act>N</is_zb_act>
+        <del_zb_date>2023-08-01</del_zb_date>
         <is_rc_act>Y</is_rc_act>
         <accnt_type>S</accnt_type>
     </brokagree>
@@ -31,9 +32,9 @@
         <deponent_id>DEP003</deponent_id>
         <deponent_name>Depositor 3</deponent_name>
         <dog_zb_no>DOG003</dog_zb_no>
-        <dog_zb_date>2023-06-10</dog_zb_date>
+        <dog_zb_date>2023-11-10</dog_zb_date>
         <is_zb_act>Y</is_zb_act>
-        <del_zb_date>2023-07-10</del_zb_date>
+        <del_zb_date>2023-10-10</del_zb_date>
         <is_rc_act>R</is_rc_act>
         <accnt_type>C</accnt_type>
     </brokagree>

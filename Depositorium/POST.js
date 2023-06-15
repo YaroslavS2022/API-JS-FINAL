@@ -61,22 +61,21 @@ export function depoagreesProcessor(xmlData) {
   });
 }
 
-
-
   // 3.10
   export function brokersProcessor(xmlData) {
     return new Promise((resolve, reject) => {
       getDirectory("brokers")
         .then(response => {
           const inputs = xmlData.request.brokers[0].broker;
+          console.log(inputs);
           const brokersEntries = response[0].brokers;
           const brokersArray = brokersEntries.broker;
-  
+          console.log(brokersArray);
           const filteredBrokers = brokersArray.filter(broker => {
-            const brokerId = broker.broker_id[0];
-            return inputs.some(input => input.broker_id[0] === brokerId);
+            const code = broker.broker_id[0];
+            return inputs.some(input => input.opcode[0] === code);
           });
-  
+          console.log(filteredBrokers);
           const xmlObject = {
             brokers: {
               $: {
@@ -87,7 +86,6 @@ export function depoagreesProcessor(xmlData) {
               broker: filteredBrokers.map(broker => ({
                 broker_id: broker.broker_id[0],
                 broker_name: broker.broker_name[0]
-                // Add other elements as needed...
               }))
             }
           };
@@ -112,9 +110,11 @@ export function depoagreesProcessor(xmlData) {
           const inputs = xmlData.request.brokagreecodes[0].opcode;
           const brokagrees = response[0].brokagrees;
           const brokagreesArray = brokagrees.brokagree;
+          console.log(inputs);
           const filteredBrokagrees = brokagreesArray.filter(brokagree => {
             const agreeId = brokagree.dog_zb_no[0];
             return inputs.includes(agreeId);
+            // return inputs.some(input => input === agreeId);
           });
           const xmlObject = {
             brokagrees: {
@@ -150,37 +150,20 @@ export function depoagreesProcessor(xmlData) {
   }
   
   // 3.12
-  
   export function fdaccntsProcessor(xmlData) {
     return new Promise((resolve, reject) => {
       getDirectory("fdaccnts")
         .then(response => {
           console.log(':::::::::');
           const inputs = xmlData.request.fdaccnts[0].fdaccnt;
-          // const codes = xmlData.request.fdaccnts[0].opcode;
-          // const dates = xmlData.request.fdaccnts[0].depoday;
-          // console.log(codes, dates)
-          // console.log(inputs)
           const fdaccntsEntries = response[0].fdaccnts;
           const fdaccntsArray = fdaccntsEntries.fdaccnt;
-          // console.log(fdaccntsArray);
           const filteredFdaccnts = fdaccntsArray.filter(fdaccnt => {
             const code = fdaccnt.opcode[0];
-            // console.log(code);
             var day = (new Date()).toString();
-            try {
-              day = fdaccnt.depoday[0];
-            } catch(_) {}
-            // return fdaccnt
+            day = fdaccnt.lastdmv[0];
             return inputs.some(input => input.opcode[0] === code || input.lastdmv[0] === day);
           });
-          console.log();
-          console.log();
-          console.log();
-          console.log();
-          console.log();
-          console.log(filteredFdaccnts);
-          // resolve("test0101")
           const xmlObject = {
             fdaccnts: {
               $: {
@@ -214,4 +197,113 @@ export function depoagreesProcessor(xmlData) {
     });
   }
   
+  // 3.13
+export function depodocsProcessor(xmlData) {
+  return new Promise((resolve, reject) => {
+    getDirectory("depodocs")
+      .then(response => {
+        const inputs = xmlData.request.depodocs[0].depodoc;
+        const depodocsEntries = response[0].depodocs;
+        const depodocsArray = depodocsEntries.depodoc;
+        const filteredDepodocs = depodocsArray.filter(depodoc => {
+          const code = depodoc.opcode[0];
+          return inputs.some(input => input.opcode[0] === code);
+        });
+        console.log(filteredDepodocs);
+        const xmlObject = {
+          fdaccnts: {
+            $: {
+              'xmlns:xs': 'http://www.w3.org/2001/XMLSchema',
+              'xsi:schemaLocation': 'http://www.example.com/fdaccnts datatypes.xsd',
+              'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance'
+            },
+            depodoc: filteredDepodocs.map(depodoc => ({
+
+              ddoc_key: depodoc.ddoc_key[0],
+              opcode: depodoc.opcode[0],
+              owner1: depodoc.owner1[0],
+              owner2: depodoc.owner2[0],
+              tp_id: depodoc.tp_id[0],
+              clcode_tp: depodoc.clcode_tp[0],
+              net_id: depodoc.net_id[0],
+              doctype: depodoc.doctype[0],
+              cpcode: depodoc.cpcode[0],
+              cpcount: depodoc.cpcount[0],
+              summa_doc: depodoc.summa_doc[0],
+              depoday_r: depodoc.depoday_r[0],
+              status: depodoc.status[0],
+              deal_key: depodoc.deal_key[0],
+              deal_no: depodoc.deal_no[0],
+              deal_date: depodoc.deal_date[0],
+              summa: depodoc.summa[0],
+              pay_date: depodoc.pay_date[0],
+              p_code: depodoc.p_code[0],
+              p_accnt: depodoc.p_accnt[0],
+              p_iban: depodoc.p_iban[0],
+              ground: depodoc.ground[0],
+              regtime: depodoc.regtime[0],
+              donetime: depodoc.donetime[0]
+            }))
+          }
+        };
+        const builder = new Builder({ renderOpts: { pretty: true }, xmldec: { version: '1.0', encoding: 'UTF-8' } });
+        const xmlString = builder.buildObject(xmlObject);
+        resolve(xmlString);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        reject(error);
+      });
+  });
+}
+
+// pi
+
+export function provodkiProcessor(xmlData) {
+  return new Promise((resolve, reject) => {
+    getDirectory("provodki")
+      .then(response => {
+        const inputs = xmlData.request.provodki[0].provodka;
+        const provodkiEntries = response[0].provodki;
+        console.log(provodkiEntries);
+        const provodkiArray = provodkiEntries.provodka;
+        const filteredProvodki = provodkiArray.filter(provodka => {
+          const code = provodka.opcode[0];
+          return inputs.some(input => input.opcode[0] === code);
+        });
+        console.log(filteredProvodki);
+        const xmlObject = {
+          fdaccnts: {
+            $: {
+              'xmlns:xs': 'http://www.w3.org/2001/XMLSchema',
+              'xsi:schemaLocation': 'http://www.example.com/fdaccnts datatypes.xsd',
+              'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance'
+            },
+            depodoc: filteredProvodki.map(provodka => ({
+
+              prov_id: provodka.prov_id[0],
+              dt_accnt: provodka.dt_accnt[0],
+              dt_owner: provodka.dt_owner[0],
+              dt_pledgee: provodka.dt_pledgee[0],
+              cr_accnt: provodka.cr_accnt[0],
+              cr_owner: provodka.cr_owner[0],
+              cr_pledgee: provodka.cr_pledgee[0],
+              opcode: provodka.opcode[0],
+              cpcount: provodka.cpcount[0],
+              ddoc_key: provodka.ddoc_key[0],
+              regtime: provodka.regtime[0],
+              execmode: provodka.execmode[0]
+            }))
+          }
+        };
+        const builder = new Builder({ renderOpts: { pretty: true }, xmldec: { version: '1.0', encoding: 'UTF-8' } });
+        const xmlString = builder.buildObject(xmlObject);
+        resolve(xmlString);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        reject(error);
+      });
+  });
+}
   

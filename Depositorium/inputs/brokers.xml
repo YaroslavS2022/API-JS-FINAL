@@ -2,13 +2,9 @@
 <request xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xsi:schemaLocation="http://www.example.com/request datatypes.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <opcode>brokers</opcode>
     <brokers>
         <broker>
-            <broker_id>ABC123</broker_id>
-        </broker>
-        <broker>
-            <broker_id>GHI789</broker_id>
+            <opcode>ABC123</opcode>
         </broker>
     </brokers>
 </request>
