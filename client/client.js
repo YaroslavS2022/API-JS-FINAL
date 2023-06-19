@@ -1,3 +1,4 @@
+// Create a new Vue instance
 new Vue({
   el: '#app',
   data: {
@@ -47,6 +48,30 @@ new Vue({
           this.response = 'Critical error while fetching data!\nCheck the console log for more information.';
         });
     },
+    attachXMLFile(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.xmlEntry = reader.result;
+      };
+      reader.readAsText(file);
+    },
+    downloadXMLFile() {
+      const xmlCode = this.response;
+      const filename = 'data.xml';
+      const blob = new Blob([xmlCode], { type: 'text/xml' });
+
+      // Create a temporary link element
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = filename;
+
+      // Simulate a click on the link to trigger the download
+      link.click();
+
+      // Remove the temporary link element
+      link.remove();
+    },
   },
   template: `
     <div>
@@ -65,11 +90,14 @@ new Vue({
         <textarea v-model="response" placeholder="Response" rows="20" style="width: 50%"></textarea>
       </div>
       <div style="display: flex;">
-        
+        <textarea v-model="code" placeholder="Code" rows="1" style="width: 50%"></textarea>
       </div>
       <br>
       <button @click="submitForm">Submit</button>
       <br>
+      <br>
+      <input type="file" @change="attachXMLFile" accept=".xml">
+      <button @click="downloadXMLFile">Download XML</button>
     </div>
   `,
 });
